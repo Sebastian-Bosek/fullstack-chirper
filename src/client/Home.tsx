@@ -38,8 +38,8 @@ class Home extends React.Component<HomeProps, HomeState> {
 					
 					{this.state.chirps.map(chirp => {
 						return(
-						<div className="card my-2 shadow">
-						<Link key={chirp.id} to={`/${chirp.id}`}  className="card-body text-center">
+						<div key={chirp.id} className="card my-2 shadow">
+						<Link  to={{pathname:`/${chirp.id}`, state: chirp}}  className="card-body text-center">
 						
 						<h5 className="card-title" >{chirp.username} {console.log(chirp.username)}</h5>
 						<p className="card-text" >{chirp.message} {console.log(chirp.message)}</p>
@@ -56,11 +56,7 @@ class Home extends React.Component<HomeProps, HomeState> {
         }
 
 		interface HomeProps {
-			chirps: {
-				id: string,
-				username: string,
-				message: string
-			}[];
+			
 		}
 
 	export interface HomeState {

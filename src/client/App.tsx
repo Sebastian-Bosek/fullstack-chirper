@@ -8,11 +8,11 @@ class App extends React.Component<IAppProps, IAppState> {
 	constructor(props: IAppProps) {
 		super(props);
 		this.state = {
-			chirps: {
-				id: null,
-				username: null,
-				message: null
-			}
+			// chirps: {
+			// 	id: null,
+			// 	username: null,
+			// 	message: null
+			// }
 		};
 	}
 
@@ -46,21 +46,21 @@ class App extends React.Component<IAppProps, IAppState> {
 }
 
 export interface IAppProps {
-	chirps:{
-		id: string,
-		username: string,
-		message: string
-	}
+	// chirps:{
+	// 	id: string,
+	// 	username: string,
+	// 	message: string
+	// }
 }
 
 export interface IAppState {
 	
 
-	chirps:{
-		id: string,
-		username: string,
-		message: string
-	}
+	// chirps:{
+	// 	id: string,
+	// 	username: string,
+	// 	message: string
+	// }
 }
 
 export default App;
